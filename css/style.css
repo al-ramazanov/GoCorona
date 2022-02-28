@@ -408,6 +408,12 @@ body.lock {
   }
 }
 
+@media screen and (max-width: 560px) {
+  .intro__items {
+    display: block;
+  }
+}
+
 .intro__text {
   margin: auto 0;
 }
