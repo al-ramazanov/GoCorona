@@ -987,3 +987,82 @@ body.lock {
     gap: calc(20px + 37 * ((100vw - 320px) /762));
   }
 }
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal__content {
+  color: #000;
+  font-size: 32px;
+  letter-spacing: 15px;
+  font-style: italic;
+  padding: 30px;
+  background-color: tomato;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+
+.modal__close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal__close::before, .modal__close::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+}
+
+.modal__close::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 14px;
+}
+
+.modal__close::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 14px;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
