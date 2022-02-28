@@ -304,9 +304,7 @@ $blueColor: #4285f4;
         grid-template-columns: repeat(2, 1fr);
         justify-content: space-between;
         @include adaptiveValue(margin-bottom, 60, 30, 1);
-        @media screen and (max-width: 560px) {
-            display: block;
-        }
+        
     }
 
     // .intro__text
